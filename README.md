@@ -1,4 +1,4 @@
-# FEVM-Data-Dao
+# FEVM-Sample-Dapp
 
 ### Clone the project
 ```bash
