@@ -2,7 +2,7 @@
 
 ### Clone the project
 ```bash
-  git clone https://github.com/NiteeshPutla/FEVM-Data-Dao
+  https://github.com/NiteeshPutla/FEVM-Sample-Dapp
 ```
 ### Install node modules
 ```bash
