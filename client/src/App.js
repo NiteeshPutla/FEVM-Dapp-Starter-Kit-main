@@ -64,7 +64,7 @@ export default function App() {
       <Navbar bg="dark" variant="dark">
         <Container>
           <Navbar.Brand>
-            Notice Board
+           Data Storage
           </Navbar.Brand>
           <Button variant="light" onClick={connectButton}>Connect Wallet</Button>
         </Container>
@@ -78,7 +78,7 @@ export default function App() {
       <div className="Notice">
       <InputGroup className="mb-3">
         <Form.Control
-          placeholder="Enter updated notice here ..."
+          placeholder="Enter updated data here ..."
           aria-label="Recipient's username"
           aria-describedby="basic-addon2"
           onChange={(e) => {
@@ -86,12 +86,12 @@ export default function App() {
           }}
         />
         <Button variant="outline-secondary" id="button-addon2" onClick ={() => {writeNotice()}}>
-          Update Notice
+          Store Data
         </Button>
       </InputGroup>
 
       <Card>
-      <Card.Header>Notice</Card.Header>
+      <Card.Header>Data</Card.Header>
       <Card.Body>
         <blockquote className="blockquote mb-0">
           <p>

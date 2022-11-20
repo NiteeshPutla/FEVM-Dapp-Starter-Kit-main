@@ -8,7 +8,7 @@ contract DataDAO {
     uint public DAObalance;
     uint decision;
     bool ended;
-    address public chairperson;
+    address public storagesetter;
 
     struct Voter {
         uint weight; 
@@ -32,10 +32,10 @@ contract DataDAO {
         string[] memory proposalNames
     ) {
         storageCollector = _storageCollector;
-        chairperson = msg.sender;
+        storagesetter = msg.sender;
         
         voteEndTime = block.timestamp + _voteTime;
-        voters[chairperson].weight = 1;
+        voters[storagesetter].weight = 1;
 
         for (uint i = 0; i < proposalNames.length; i++) {
 
@@ -63,7 +63,7 @@ contract DataDAO {
       function giveRightToVote(address voter) public {
 
         require(
-            msg.sender == chairperson,
+            msg.sender == storagesetter,
             "Only owner can give right to vote."
         );
         require(
@@ -102,11 +102,11 @@ contract DataDAO {
             
         require(
             DAObalance >= 1 ether,
-            "Not enough balance in DAO required to buy cupcake. Members may withdraw deposited ether.");
+            "Not enough balance in DAO required to stake. Members may withdraw deposited ether.");
             
         require(
             decision == 0,
-            "DAO decided to not buy cupcakes. Members may withdraw deposited ether.");
+            "DAO cannot buy stakes. Members may withdraw deposited ether.");
             
             
         if (DAObalance  < 1 ether) revert();
