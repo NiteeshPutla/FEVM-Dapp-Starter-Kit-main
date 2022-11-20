@@ -1,4 +1,4 @@
-# FEVM-Dapp-Starter-Kit
+# FEVM-Data-Dao
 
 ### Clone the project
 ```bash
@@ -6,7 +6,7 @@
 ```
 ### Install node modules
 ```bash
-  cd FEVM-Dapp-Starter-Kit
+  cd FEVM-Data-Dao
   npm install
 ```
 ### Update the private key
